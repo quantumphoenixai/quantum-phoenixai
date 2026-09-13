@@ -1,0 +1,49 @@
+{"timestamp": "2026-09-13T16:36:36.592314", "event": "entered", "track_id": 1, "label": "person"}
+{"timestamp": "2026-09-13T16:39:43.397603", "event": "entered", "track_id": 1, "label": "person"}
+{"timestamp": "2026-09-13T16:39:50.565666", "event": "entered", "track_id": 2, "label": "cell phone"}
+{"timestamp": "2026-09-13T16:39:54.582998", "event": "left", "label": "cell phone", "track_id": 2, "duration": 4.0}
+{"timestamp": "2026-09-13T16:39:57.020146", "event": "entered", "track_id": 3, "label": "cell phone"}
+{"timestamp": "2026-09-13T16:39:59.058165", "event": "left", "label": "cell phone", "track_id": 3, "duration": 2.0}
+{"timestamp": "2026-09-13T16:40:09.102623", "event": "entered", "track_id": 5, "label": "chair"}
+{"timestamp": "2026-09-13T16:40:09.103318", "event": "left", "label": "person", "track_id": 1, "duration": 24.5}
+{"timestamp": "2026-09-13T16:40:14.904365", "event": "entered", "track_id": 6, "label": "person"}
+{"timestamp": "2026-09-13T16:40:14.905192", "event": "left", "label": "chair", "track_id": 5, "duration": 5.0}
+{"timestamp": "2026-09-13T17:03:36.358060", "event": "entered", "track_id": 1, "label": "person"}
+{"timestamp": "2026-09-13T17:03:36.359645", "event": "zone_entered", "zone": "driveway", "label": "person", "track_id": 1}
+{"timestamp": "2026-09-13T17:03:42.665207", "event": "entered", "track_id": 3, "label": "cell phone"}
+{"timestamp": "2026-09-13T17:03:42.666066", "event": "zone_entered", "zone": "vehicle_area", "label": "cell phone", "track_id": 3}
+{"timestamp": "2026-09-13T17:03:43.005963", "event": "zone_entered", "zone": "driveway", "label": "cell phone", "track_id": 3}
+{"timestamp": "2026-09-13T17:03:43.233944", "event": "left", "label": "cell phone", "track_id": 3, "duration": 0.5}
+{"timestamp": "2026-09-13T17:03:43.681299", "event": "entered", "track_id": 3, "label": "cell phone"}
+{"timestamp": "2026-09-13T17:03:43.681991", "event": "zone_entered", "zone": "driveway", "label": "cell phone", "track_id": 3}
+{"timestamp": "2026-09-13T17:03:43.743238", "event": "left", "label": "cell phone", "track_id": 3, "duration": 0.0}
+{"timestamp": "2026-09-13T17:03:43.864280", "event": "entered", "track_id": 3, "label": "cell phone"}
+{"timestamp": "2026-09-13T17:03:43.864952", "event": "zone_entered", "zone": "driveway", "label": "cell phone", "track_id": 3}
+{"timestamp": "2026-09-13T17:03:43.985481", "event": "left", "label": "cell phone", "track_id": 3, "duration": 0.1}
+{"timestamp": "2026-09-13T17:03:44.333658", "event": "entered", "track_id": 3, "label": "cell phone"}
+{"timestamp": "2026-09-13T17:03:44.334556", "event": "zone_entered", "zone": "vehicle_area", "label": "cell phone", "track_id": 3}
+{"timestamp": "2026-09-13T17:03:44.671675", "event": "left", "label": "cell phone", "track_id": 3, "duration": 0.3}
+{"timestamp": "2026-09-13T17:03:44.728524", "event": "entered", "track_id": 3, "label": "cell phone"}
+{"timestamp": "2026-09-13T17:03:44.729323", "event": "zone_entered", "zone": "vehicle_area", "label": "cell phone", "track_id": 3}
+{"timestamp": "2026-09-13T17:03:51.121448", "event": "left", "label": "cell phone", "track_id": 3, "duration": 6.3}
+{"timestamp": "2026-09-13T17:04:07.840435", "event": "entered", "track_id": 5, "label": "cell phone"}
+{"timestamp": "2026-09-13T17:04:07.841156", "event": "zone_entered", "zone": "driveway", "label": "cell phone", "track_id": 5}
+{"timestamp": "2026-09-13T17:04:07.993471", "event": "entered", "track_id": 6, "label": "cell phone"}
+{"timestamp": "2026-09-13T17:04:07.994112", "event": "zone_entered", "zone": "driveway", "label": "cell phone", "track_id": 6}
+{"timestamp": "2026-09-13T17:04:07.994648", "event": "left", "label": "cell phone", "track_id": 5, "duration": 0.1}
+{"timestamp": "2026-09-13T17:04:08.250419", "event": "left", "label": "cell phone", "track_id": 6, "duration": 0.2}
+{"timestamp": "2026-09-13T17:04:08.317233", "event": "entered", "track_id": 6, "label": "cell phone"}
+{"timestamp": "2026-09-13T17:04:08.317896", "event": "zone_entered", "zone": "driveway", "label": "cell phone", "track_id": 6}
+{"timestamp": "2026-09-13T17:04:08.514643", "event": "left", "label": "cell phone", "track_id": 6, "duration": 0.1}
+{"timestamp": "2026-09-13T17:04:08.578001", "event": "entered", "track_id": 6, "label": "toothbrush"}
+{"timestamp": "2026-09-13T17:04:08.578678", "event": "zone_entered", "zone": "driveway", "label": "toothbrush", "track_id": 6}
+{"timestamp": "2026-09-13T17:04:08.703345", "event": "left", "label": "toothbrush", "track_id": 6, "duration": 0.1}
+{"timestamp": "2026-09-13T17:04:08.878535", "event": "entered", "track_id": 6, "label": "toothbrush"}
+{"timestamp": "2026-09-13T17:04:08.879862", "event": "zone_entered", "zone": "driveway", "label": "toothbrush", "track_id": 6}
+{"timestamp": "2026-09-13T17:04:09.108798", "event": "left", "label": "toothbrush", "track_id": 6, "duration": 0.2}
+{"timestamp": "2026-09-13T17:04:09.171529", "event": "entered", "track_id": 6, "label": "toothbrush"}
+{"timestamp": "2026-09-13T17:04:09.172479", "event": "zone_entered", "zone": "driveway", "label": "toothbrush", "track_id": 6}
+{"timestamp": "2026-09-13T17:04:09.962954", "event": "left", "label": "toothbrush", "track_id": 6, "duration": 0.7}
+{"timestamp": "2026-09-13T17:04:10.020819", "event": "entered", "track_id": 6, "label": "toothbrush"}
+{"timestamp": "2026-09-13T17:04:10.021639", "event": "zone_entered", "zone": "driveway", "label": "toothbrush", "track_id": 6}
+{"timestamp": "2026-09-13T17:04:10.311585", "event": "left", "label": "toothbrush", "track_id": 6, "duration": 0.2}

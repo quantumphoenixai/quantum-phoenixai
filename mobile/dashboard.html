@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quantum Phoenix Dashboard</title>
+  <style>
+    :root { color-scheme: light; font-family: Georgia, serif; --ink: #17202a; --muted: #65727e; --accent: #d85c3c; --line: #d9e0e5; --wash: #f4f1eb; }
+    body { margin: 0; color: var(--ink); background: linear-gradient(135deg, #f7f3ed, #dfe9e8); min-height: 100vh; }
+    main { max-width: 960px; margin: auto; padding: 40px 20px; }
+    header { display: flex; justify-content: space-between; align-items: end; gap: 20px; border-bottom: 2px solid var(--ink); padding-bottom: 20px; }
+    h1 { margin: 0; font-size: clamp(2rem, 6vw, 4.5rem); line-height: .9; letter-spacing: 0; }
+    header p { max-width: 260px; color: var(--muted); margin: 0; font-family: system-ui, sans-serif; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 24px 0; }
+    .stat, section { background: rgba(255,255,255,.72); border: 1px solid var(--line); padding: 18px; }
+    .stat strong { display: block; font: 700 2rem system-ui, sans-serif; color: var(--accent); }
+    .stat span, h2, li { font-family: system-ui, sans-serif; }
+    h2 { font-size: 1rem; text-transform: uppercase; letter-spacing: .08em; margin-top: 0; }
+    .columns { display: grid; grid-template-columns: 1.4fr .8fr; gap: 12px; }
+    ul { list-style: none; padding: 0; margin: 0; }
+    li { border-top: 1px solid var(--line); padding: 12px 0; display: flex; justify-content: space-between; gap: 12px; }
+    small { color: var(--muted); }
+    @media (max-width: 680px) { header, .columns { display: block; } header p { margin-top: 18px; } .grid { grid-template-columns: 1fr; } section { margin-top: 12px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header><h1>Quantum<br>Phoenix</h1><p>Situational understanding from the events your camera observes.</p></header>
+    <div class="grid">
+      <div class="stat"><strong id="tracked">-</strong><span>tracked objects</span></div>
+      <div class="stat"><strong id="active">-</strong><span>still present</span></div>
+      <div class="stat"><strong id="alerts">-</strong><span>alerts recorded</span></div>
+    </div>
+    <div class="columns">
+      <section><h2>Recent activity</h2><ul id="events"><li>Loading...</li></ul></section>
+      <section><h2>Zones</h2><ul id="zones"><li>Loading...</li></ul></section>
+    </div>
+  </main>
+  <script>
+    const text = value => value == null ? "-" : value;
+    async function load() {
+      const [summary, alerts, events] = await Promise.all([
+        fetch('/api/summary').then(response => response.json()),
+        fetch('/api/alerts').then(response => response.json()),
+        fetch('/api/events').then(response => response.json())
+      ]);
+      document.querySelector('#tracked').textContent = text(summary.total_tracked_objects);
+      document.querySelector('#active').textContent = text(summary.active_objects.length);
+      document.querySelector('#alerts').textContent = text(alerts.length);
+      document.querySelector('#events').innerHTML = events.slice(-8).reverse().map(event =>
+        `<li><span>${event.label || 'Object'} ${event.event.replaceAll('_', ' ')}</span><small>${event.timestamp || ''}</small></li>`
+      ).join('') || '<li>No events yet.</li>';
+      document.querySelector('#zones').innerHTML = Object.entries(summary.zone_entries).map(([zone, count]) =>
+        `<li><span>${zone.replaceAll('_', ' ')}</span><strong>${count}</strong></li>`
+      ).join('') || '<li>No zone activity yet.</li>';
+    }
+    load().catch(() => document.querySelector('#events').innerHTML = '<li>Dashboard API unavailable.</li>');
+  </script>
+</body>
+</html>
